@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Survey;
+use Auth;
 
 class SurveyController extends Controller {
   public function index() {
@@ -14,7 +16,50 @@ class SurveyController extends Controller {
   }
 
   public function store(Request $request) {
-    //
-    return redirect(route('survey.index'));
+    dd($request);
+    return redirect(route('survey.create'));
   }
 }
+
+/*
+$types = $request->types;
+$types = [
+  [
+    'name' => 'typename',
+    'subtypes' => [
+      [
+        'name' => 'subtypename1'
+      ],
+      [
+        'name' => 'subtypename2'
+      ]
+    ]
+  ],
+];
+
+$survey = $request->survey;
+$survey = [
+  'name' => 'surveybla',
+  'questions' => [
+    [
+      'text' => 'blablabla?',
+      'options' => [
+
+      ]
+    ],
+    [
+      'text' => 'blablabla?'
+    ],
+    [
+      'text' => 'blablabla?'
+    ],
+  ],
+];
+$settings = $request->settings;
+$settings = [
+  'combination' => true,
+  'unordered' => true,
+  'single' => false
+];
+$survey->settings()->create($settings);
+*/

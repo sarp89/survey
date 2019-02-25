@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    Create a survey here!
+                    <simple></simple>
+                    <complex></complex>
+                    <advanced></advanced>
                 </div>
             </div>
         </div>

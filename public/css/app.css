@@ -10660,3 +10660,12 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.logo-img {
+  background: url(/images/myquery-logo.png?57fefdd4ac9bf2cbba8fd9633663e22d);
+  width: 128px;
+  height: 32px;
+  background-size: 128px 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
