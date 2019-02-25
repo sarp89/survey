@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Main index</div>
+                <div class="card-header">Profile</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,15 @@
                         </div>
                     @endif
 
-                    This is the index page!
+                    {{ session('flash') }}
+
+                    {{ Form::model($user, array('route' => 'user.update', $user->id)) }}
+                        {{ Form::label('name', 'Name') }}
+                        {{ Form::text('name') }}
+                        {{ Form::label('email', 'Email') }}
+                        {{ Form::email('email') }}
+                        {{ Form::submit('Submit') }}
+                    {{ Form::close() }}
                 </div>
             </div>
         </div>

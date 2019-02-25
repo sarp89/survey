@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Main index</div>
+                <div class="card-header">Create a survey</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    This is the index page!
+                    Create a survey here!
                 </div>
             </div>
         </div>

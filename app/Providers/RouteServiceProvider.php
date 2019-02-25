@@ -16,6 +16,7 @@ class RouteServiceProvider extends ServiceProvider {
         $this->mapApiRoutes();
         $this->mapWebRoutes();
         $this->mapUserRoutes();
+        $this->mapSurveyRoutes();
     }
 
     protected function mapWebRoutes() {
@@ -36,5 +37,12 @@ class RouteServiceProvider extends ServiceProvider {
              ->middleware(['web', 'auth'])
              ->namespace($this->namespace)
              ->group(base_path('routes/user.php'));
+    }
+
+    protected function mapSurveyRoutes() {
+        Route::prefix('survey')
+             ->middleware(['web', 'auth'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/survey.php'));
     }
 }

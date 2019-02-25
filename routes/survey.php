@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| User Routes
+| Survey Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'UserController@index')->name('user.index');
-Route::get('/edit', 'UserController@edit')->name('user.edit');
+Route::get('/', 'SurveyController@index')->name('survey.index');
+Route::get('/create', 'SurveyController@create')->name('survey.create');
 
-Route::post('/update', 'UserController@update')->name('user.update');
+Route::post('/store', 'SurveyController@store')->name('survey.store');
