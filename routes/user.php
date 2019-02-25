@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| User Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -11,6 +11,4 @@
 |
 */
 
-Auth::routes();
-
-Route::get('/', 'MainController@index')->name('main.index');
+Route::get('/', 'UserController@index')->name('user.index');
