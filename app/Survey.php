@@ -7,11 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Survey extends Model {
 
   protected $fillable = [
-      'user_id', 'name', 'combination'
+      'user_id', 'name'
   ];
 
   public function user() {
     return $this->belongsTo(User::class);
+  }
+
+  public function settings() {
+    return $this->hasOne(SurveySetting::class);
   }
 
   public function answers() {
