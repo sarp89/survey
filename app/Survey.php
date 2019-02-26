@@ -14,20 +14,16 @@ class Survey extends Model {
     return $this->belongsTo(User::class);
   }
 
-  public function settings() {
-    return $this->hasOne(SurveySetting::class);
-  }
-
   public function answers() {
     return $this->hasMany(Answer::class);
   }
 
-  public function combinations() {
-    return $this->hasMany(Combination::class);
-  }
-
   public function participants() {
     return $this->hasMany(Participant::class);
+  }
+
+  public function types() {
+    return $this->hasMany(Type::class);
   }
 
   public function questions() {

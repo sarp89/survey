@@ -15,3 +15,5 @@ Route::get('/', 'UserController@index')->name('user.index');
 Route::get('/edit', 'UserController@edit')->name('user.edit');
 
 Route::post('/update', 'UserController@update')->name('user.update');
+
+Route::get('/testsurvey', 'ParentTest@makeParent')->name('make.parent');

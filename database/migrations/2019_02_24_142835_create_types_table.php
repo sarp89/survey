@@ -18,7 +18,9 @@ class CreateTypesTable extends Migration
 
             $table->unsignedInteger('survey_id');
             $table->foreign('survey_id')->references('id')->on('surveys');
-            
+
+            $table->unsignedInteger('parent_id')->nullable();
+
             $table->string('name');
             $table->timestamps();
         });

@@ -19,8 +19,8 @@ class CreateOptionsTable extends Migration
             $table->unsignedInteger('question_id');
             $table->foreign('question_id')->references('id')->on('questions');
 
-            $table->unsignedInteger('subtype_id');
-            $table->foreign('subtype_id')->references('id')->on('subtypes');
+            $table->unsignedInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('types');
 
             $table->double('weight', 3, 2)->default(1);
             $table->unsignedInteger('number')->nullable();

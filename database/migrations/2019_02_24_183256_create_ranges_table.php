@@ -19,8 +19,8 @@ class CreateRangesTable extends Migration
             $table->unsignedInteger('result_id');
             $table->foreign('result_id')->references('id')->on('results');
 
-            $table->unsignedInteger('subtype_id');
-            $table->foreign('subtype_id')->references('id')->on('subtypes');
+            $table->unsignedInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('types');
 
             $table->double('from', 3, 2);
             $table->double('to', 3, 2);
